@@ -12,14 +12,14 @@ to each step scenario  and each step
 public class Hooks {
 
     // import from io.cucumber.java not from junit
-    @Before (order = 2)
+  //  @Before (order = 2)
     public void setupScenario(){
 
         System.out.println("====Setting up browser using cucumber @Before");
 
     }
 
-    @Before (value = "@login" , order = 1)
+   // @Before (value = "@login" , order = 1)
     public void setupScenarioForLogins(){
 
         System.out.println("====this will only apply to scenarios with @login tag");
