@@ -1,9 +1,12 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 /*
 In thıs class we will be able to pass pre & past conditions
@@ -36,8 +39,15 @@ public class Hooks {
     @After
     public void  tearDownScenario(){
 
+        byte [] screenshot  = ( ( TakesScreenshot ) Driver.getDriver() ).getScreenshotAs( OutputType.BYTES );
+
+        /*
         System.out.println("===Closing browser using Cucumber @After");
         System.out.println("===Scenario ended / Take screenshot if failed");
+
+         */
+
+        Driver.closeDriver();
     }
 
     @BeforeStep

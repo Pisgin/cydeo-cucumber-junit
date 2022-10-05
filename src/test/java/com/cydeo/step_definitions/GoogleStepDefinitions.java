@@ -9,17 +9,21 @@ import org.openqa.selenium.Keys;
 
 public class GoogleStepDefinitions {
 
+
     @When("user types {word} and clicks enter")
     public void user_types_and_clicks_enter2(String searchkeyword ) {
         googleSearchPage.searchBox.sendKeys(searchkeyword + Keys.ENTER );
 
     }
 
+
     @When("user types {string} and clicks enter")
     public void user_types_and_clicks_enter1(String searchkeyword ) {
         googleSearchPage.searchBox.sendKeys(searchkeyword + Keys.ENTER );
 
     }
+
+
     @Then("user sees {string} in the google title")
     public void user_sees_in_the_google_title(String string ) {
 
@@ -30,10 +34,12 @@ public class GoogleStepDefinitions {
 
     }
 
+
    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
 
     @Then("user sees {word} in the google title")
+
     public void user_sees_apple_in_the_google_title(String  word) {
 
 
@@ -52,6 +58,8 @@ public class GoogleStepDefinitions {
         Driver.getDriver().get("https://www.google.com");
 
     }
+
+
     @Then("user should see title is Google")
     public void user_should_see_title_is_google() {
 
