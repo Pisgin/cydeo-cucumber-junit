@@ -37,7 +37,7 @@ public class GoogleStepDefinitions {
 
    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
-
+/*
     @Then("user sees {word} in the google title")
 
     public void user_sees_apple_in_the_google_title(String  word) {
@@ -51,6 +51,8 @@ public class GoogleStepDefinitions {
 
         Driver.closeDriver();
     }
+
+ */
 
     @When("user in on Google search page")
     public void user_in_on_google_search_page() {
