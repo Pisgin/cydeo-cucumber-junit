@@ -8,25 +8,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-    private  Driver(){}
+    private Driver() {
+    }
 
-    private  static WebDriver driver;
+    private static WebDriver driver;
 
     public static WebDriver getDriver() {
 
-        if (driver == null){
+        if (driver == null) {
 
             String browsertype = ConfigurationReader.getProperty("browser");
 
-            switch (browsertype){
-                case "chrome" :
+            switch (browsertype) {
+                case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     driver.manage().window().maximize();
                     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     break;
 
-                case  "firefox" :
+                case "firefox":
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();
@@ -38,9 +39,9 @@ public class Driver {
         return driver;
     }
 
-    public static void closeDriver(){
+    public static void closeDriver() {
 
-        if (driver != null ){
+        if (driver != null) {
             driver.quit();
             driver = null;
         }

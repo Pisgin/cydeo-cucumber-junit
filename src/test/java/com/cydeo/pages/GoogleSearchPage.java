@@ -11,15 +11,12 @@ public class GoogleSearchPage {
     //initialize the driver instance  and  this class' instance using   PageFactory.initElements
     public GoogleSearchPage() {
 
-        PageFactory.initElements(Driver.getDriver() , this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     // we can start  locating web elements  using @FindBy annotatition
-    @FindBy ( name = "q")
+    @FindBy(name = "q")
     public WebElement searchBox;
-
-
-
 
 
 }

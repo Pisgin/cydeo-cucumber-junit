@@ -22,18 +22,17 @@ public class ConfigurationReader {
 
             file.close();
 
-        }catch ( IOException e){
+        } catch (IOException e) {
             System.out.println("Fıle not found in the ConfigurationReader class");
             e.printStackTrace();
         }
 
     }
 
-    public static String getProperty( String  keyword ){
+    public static String getProperty(String keyword) {
 
-        return properties.getProperty( keyword );
+        return properties.getProperty(keyword);
     }
-
 
 
 }

@@ -1,18 +1,17 @@
 package com.cydeo.utilities;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
 
 public class BrowserUtils {
 
-    public static void sleep ( int second ){
+    public static void sleep(int second) {
         second *= 1000;
 
         try {
             Thread.sleep(second);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
 
         }
     }
@@ -30,31 +29,31 @@ public class BrowserUtils {
     //• Arg3: String expectedTitle
     //
 
-    public static void switchWindowAndVerify (String expectedInUrl , String expectedTitle ) {
-        Set<String > allWindoewsHandle = Driver.getDriver().getWindowHandles();
-        for (String each  : allWindoewsHandle ) {
+    public static void switchWindowAndVerify(String expectedInUrl, String expectedTitle) {
+        Set<String> allWindoewsHandle = Driver.getDriver().getWindowHandles();
+        for (String each : allWindoewsHandle) {
 
             Driver.getDriver().switchTo().window(each);
 
             // System.out.println("each = " + each);
 
-            System.out.println("Current Url : " + Driver.getDriver().getCurrentUrl() );
+            System.out.println("Current Url : " + Driver.getDriver().getCurrentUrl());
 
-            if (Driver.getDriver().getCurrentUrl().contains( expectedInUrl )){
+            if (Driver.getDriver().getCurrentUrl().contains(expectedInUrl)) {
                 break;
             }
 
         }
 
-        String  actualTitle = Driver.getDriver().getTitle();
+        String actualTitle = Driver.getDriver().getTitle();
 
-        Assert.assertTrue(actualTitle.contains(expectedTitle ) );
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
     }
 
-    public static void verifyTitle ( String expectedTitle ) {
+    public static void verifyTitle(String expectedTitle) {
 
-        Assert.assertEquals( Driver.getDriver().getTitle() , expectedTitle );
+        Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
 
     }
 

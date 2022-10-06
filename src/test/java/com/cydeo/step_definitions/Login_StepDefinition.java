@@ -10,11 +10,13 @@ public class Login_StepDefinition {
     public void user_enters_librarian_username() {
         System.out.println("User enters librarian username");
     }
+
     @When("user enters librarian password")
     public void user_enters_librarian_password() {
         System.out.println("User enters librarian password");
 
     }
+
     @Then("user should see the dashboard")
     public void user_should_see_the_dashboard() {
         System.out.println("User should see the dashboard");
@@ -27,6 +29,7 @@ public class Login_StepDefinition {
     public void user_enters_student_username() {
         System.out.println("User enter student username");
     }
+
     @When("user enters student password")
     public void user_enters_student_paaword() {
         System.out.println("User enters student password");
@@ -36,6 +39,7 @@ public class Login_StepDefinition {
     public void user_enters_admin_username() {
         System.out.println("User enters admin username");
     }
+
     @When("user enters admin password")
     public void user_enters_admin_password() {
         System.out.println("User enters admin password");
