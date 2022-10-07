@@ -14,4 +14,6 @@ import org.junit.runner.RunWith;
         tags = "@wip"
 )
 public class CukesRunner {
+
+    // 2.22.00 dan devam edilecek
 }
