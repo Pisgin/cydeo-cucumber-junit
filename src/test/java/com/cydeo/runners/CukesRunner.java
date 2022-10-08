@@ -15,5 +15,5 @@ import org.junit.runner.RunWith;
 )
 public class CukesRunner {
 
-    // 2.22.00 dan devam edilecek
+
 }
