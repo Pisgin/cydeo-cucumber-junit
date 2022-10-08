@@ -25,7 +25,7 @@ Feature: Wikipedia search functionality and verifications
     @soccerPlayers
     Examples: search values we are going to be using in this scenario is as below
       | searchValue       | expectedTitle     | expectedMainHeader |
-      | Steve Jobs        | Steve Jobs        | Steve Jobs         |
+      | Steve Jobs        | Steve Jobs        | Steve Jobsssss     |
       | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
       | Bob Marley        | Bob Marley        | Bob Marley         |
       | Chuck Norris      | Chuck Norris      | Chuck Norris       |
